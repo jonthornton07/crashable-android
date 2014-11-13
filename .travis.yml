@@ -25,7 +25,6 @@ android:
 
 # Emulator Management: Create, Start and Wait
 before_script:
-  - ant clean
   - echo no | android create avd --force -n test -t android-18 --abi armeabi-v7a
   - emulator -avd test -no-skin -no-audio -no-window &
   - android-wait-for-emulator
